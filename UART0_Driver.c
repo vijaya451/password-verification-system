@@ -31,7 +31,22 @@ void uart0_string(char *p)
 		p++;
 	}
 }
-
+void uart0_int(int num)
+{
+	int a[10];
+	int i=0;
+	if(num==0){
+		uart0_tx('0');
+		return;
+	}
+	while(num){
+		a[i]=num%10;
+		i++;
+		num/=10;
+	}
+	for(i=i-1;i>=0;i--)
+	uart0_tx(a[i]+48);
+}
 
 
 
