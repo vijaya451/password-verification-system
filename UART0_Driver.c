@@ -31,7 +31,7 @@ void uart0_string(char *p)
 		p++;
 	}
 }
-void uart0_int(int num)
+void uart0_int(unsigned int num)
 {
 	int a[10];
 	int i=0;
